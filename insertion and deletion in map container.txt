@@ -1,0 +1,28 @@
+ #include<iostream>
+#include<map>
+#include<iterator>
+using namespace std;
+ void print(map<int,char,less<int>>arr)
+ {
+     map<int,char,less<int>>::iterator itr;
+               for (itr =arr.begin(); itr !=arr.end(); ++itr) {
+        cout << itr->first
+             << "-" << itr->second << '\n';
+               }
+     
+ }
+int main()
+{
+     map<int,char,less<int>>arr;
+  
+       arr.insert({1,'a'});
+       arr.insert({2,'b'});
+       arr.insert({3,'c'});
+       arr.insert({4,'d'});
+       arr.insert({5,'e'});
+         print(arr);
+           cout<<"--------"<<"\n";
+                 arr.erase(3);
+           print(arr);
+
+         }
